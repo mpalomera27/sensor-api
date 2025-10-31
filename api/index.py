@@ -62,7 +62,7 @@ def insert_sensor_value(sensor_id):
 
         # Insert into sensors table
         cur.execute(
-            "INSERT INTO sensors (id, value) VALUES (%s, %s)",
+            "INSERT INTO sensors (sensor_id, value) VALUES (%s, %s)",
             (sensor_id, value)
         )
         conn.commit()

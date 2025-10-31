@@ -12,6 +12,7 @@ PASSWORD = os.getenv("password")
 HOST = os.getenv("host")
 PORT = os.getenv("port")
 DBNAME = os.getenv("dbname")
+CONNECTION_STRING = os.getenv("connection_string")
 
 app = Flask(__name__)
 
@@ -27,13 +28,7 @@ def about():
 def sensor():
    # Connect to the database
     try:
-        connection = psycopg2.connect(
-            user=USER,
-            password=PASSWORD,
-            host=HOST,
-            port=PORT,
-            dbname=DBNAME
-        )
+        connection = psycopg2.connect(CONNECTION_STRING)
         print("Connection successful!")
         
         # Create a cursor to execute SQL queries

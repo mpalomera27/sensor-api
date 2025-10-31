@@ -100,7 +100,7 @@ def get_sensor(sensor_id):
         # Convert to lists for graph
         values = [r[0] for r in rows][::-1]        # reverse for chronological order
         timestamps = [r[1].strftime('%Y-%m-%d %H:%M:%S') for r in rows][::-1]
-        return values
+        return (rows,values,timestamps)
 
         #return render_template("sensor.html", sensor_id=sensor_id, values=values, timestamps=timestamps, rows=rows)
 

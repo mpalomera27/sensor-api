@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,request, jsonify
 import psycopg2
 from dotenv import load_dotenv
 import os

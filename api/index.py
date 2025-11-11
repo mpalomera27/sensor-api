@@ -110,6 +110,22 @@ def get_sensor(sensor_id):
         if 'conn' in locals():
             conn.close()
 
+
+@app.route("/users")
+def users():
+    users = [
+        {"name": "Alice", "email": "alice@example.com", "role": "Admin"},
+        {"name": "Bob", "email": "bob@example.com", "role": "Editor"},
+        {"name": "Charlie", "email": "charlie@example.com", "role": "Viewer"},
+    ]
+
+    return render_template(
+        "index.html",
+        title="Flask Render Demo",
+        user="Miguel",
+        users=users
+    )
+
 if __name__ == "__main__":
     app.run(debug=True)
 

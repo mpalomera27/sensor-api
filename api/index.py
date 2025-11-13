@@ -125,6 +125,10 @@ def users():
         user="Miguel",
         users=users
     )
+@app.route("/hello")
+def hello():
+    return render_html("hello.html)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

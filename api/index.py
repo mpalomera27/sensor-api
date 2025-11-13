@@ -128,7 +128,7 @@ def users():
 
 @app.route("/hello")
 def hello():
-    return render_template("hello.html")
+    return render_template("hello.html",user="Fulanito")
 
 
 if __name__ == "__main__":
